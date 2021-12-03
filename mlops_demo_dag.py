@@ -30,7 +30,7 @@ with DAG('mlops_demo_dag',
   default_args = default_args
   ) as dag:
 
-    job_id = get_job_id_by_name("shenlin_mlops_demo", "databricks_default")
+    job_id = get_job_id_by_name("dj_mlops_demo", "databricks_default")
     operator = DatabricksRunNowOperator(
         job_id=job_id,
         task_id = 'run_now',
